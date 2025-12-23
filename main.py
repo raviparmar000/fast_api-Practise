@@ -1,16 +1,16 @@
 from fastapi import FastAPI
-from pydantic import BaseModel   # 👈 yahan import
+from pydantic import BaseModel  
 
 app = FastAPI()
 
-# 🔹 Pydantic Model (yahan likhna hai)
+#  Pydantic Model
 class UserCreate(BaseModel):
     name: str
     email: str
     age: int
 
 
-# 🔹 Routes (APIs)
+#  Routes (APIs)
 @app.get("/")
 def home():
     return {"message": "Hello FastAPI"}
